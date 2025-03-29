@@ -153,7 +153,7 @@
     <div id="game-intro">
         <h2>游戏介绍</h2>
         <p>按下空格键或上方向键，让小鸟向上飞行。</p>
-        <p>躲避水管，每穿过一对水管得1分。</p>
+        <p>躲避水管，每穿过一对水管得100分。</p>
         <p>不要撞到水管或地面，否则游戏结束。</p>
         <p>按下任意键开始游戏！</p>
     </div>
@@ -345,7 +345,7 @@
 
                     // 得分检测
                     if (pipe.x + pipeWidth < bird.x && !pipe.scored) {
-                        score++;
+                        score += 100;
                         scoreElement.textContent = `得分: ${score}`;
                         pipe.scored = true;
                     }
